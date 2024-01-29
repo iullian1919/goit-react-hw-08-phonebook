@@ -1,5 +1,5 @@
 import React from 'react';
-import ContactsItem from 'components/ContactItem/ContactItem';
+import ContactsItem from '../ContactsItem';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectContacts, selectFilter } from 'store/contacts/selectors';
 import { fetchContacts } from 'store/contacts/operations';
@@ -32,9 +32,11 @@ const ContactList = () => {
         <Table>
           <Thead>
             <Tr bg="#a2b5d5">
-              <Th>Name</Th>
-              <Th>number</Th>
-              <Th textAlign="right">options</Th>
+              <Th color="white">Name</Th>
+              <Th color="white">number</Th>
+              <Th color="white" textAlign="right">
+                options
+              </Th>
             </Tr>
           </Thead>
           <Tbody>

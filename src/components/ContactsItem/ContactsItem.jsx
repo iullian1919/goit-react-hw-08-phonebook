@@ -1,9 +1,9 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { deleteContact } from 'store/contacts/operations';
 import { Button, Td, Tr } from '@chakra-ui/react';
 import { DeleteIcon } from '@chakra-ui/icons';
+import PropTypes from 'prop-types';
 
 const ContactsItem = ({ contact }) => {
   const dispatch = useDispatch();

@@ -1,5 +1,6 @@
 import React from 'react';
-import ContactForm from 'components/ContactForm/ContactForm';
+import ContactForm from '../ContactForm';
+import PropTypes from 'prop-types';
 import {
   ModalOverlay,
   ModalContent,
@@ -8,7 +9,6 @@ import {
   Modal,
   ModalBody,
 } from '@chakra-ui/react';
-import PropTypes from 'prop-types';
 
 export function AddContactModal({ isOpen, onClose }) {
   return (

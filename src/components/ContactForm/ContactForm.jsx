@@ -3,6 +3,8 @@ import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { addContact } from 'store/contacts/operations';
 import { selectContacts } from 'store/contacts/selectors';
+import PropTypes from 'prop-types';
+
 import {
   Button,
   Center,
@@ -10,7 +12,6 @@ import {
   FormLabel,
   Input,
 } from '@chakra-ui/react';
-import PropTypes from 'prop-types';
 
 const ContactForm = ({ close }) => {
   const [name, setName] = useState('');

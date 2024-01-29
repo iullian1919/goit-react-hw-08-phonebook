@@ -1,8 +1,8 @@
 import React from 'react';
 import { Container, Text } from '@chakra-ui/react';
 import { Flex, Spacer } from '@chakra-ui/react';
-import LoginNav from 'components/LoginNav/LoginNav';
-import UserMenu from 'components/UserMenu/UserMenu';
+import LoginNav from '../LoginNav';
+import UserMenu from '../UserMenu';
 import { useSelector } from 'react-redux';
 import { selectIsLoggedIn } from 'store/auth/selectors';
 import { useMediaQuery } from '@chakra-ui/react';
