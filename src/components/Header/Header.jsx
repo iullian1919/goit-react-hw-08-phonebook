@@ -9,10 +9,10 @@ import { useMediaQuery } from '@chakra-ui/react';
 import { useNavigate } from 'react-router-dom';
 
 const Header = () => {
-  const [isLargerThan600] = useMediaQuery('(min-width: 600px)');
+  const [isSmallerThan400] = useMediaQuery('(min-width: 300px)');
   const isLoggedIn = useSelector(selectIsLoggedIn);
   const setFontsize = () => {
-    return isLargerThan600 ? '6xl' : '3xl';
+    return isSmallerThan400 ? '6xl' : '3xl';
   };
   const navigate = useNavigate();
   const handleNavigate = () => {
@@ -40,12 +40,15 @@ const Header = () => {
             fontSize={setFontsize()}
             cursor="pointer"
             onClick={handleNavigate}
+            whiteSpace="nowrap" // Evită să se înșiruiască textul pe mai multe linii
+            overflow="hidden" // Ascunde textul care depășește limitele containerului
+            textOverflow="ellipsis"
           >
             Phonebook
           </Text>
 
           <Spacer />
-          {isLoggedIn ? <UserMenu size={isLargerThan600} /> : <LoginNav />}
+          {isLoggedIn ? <UserMenu size={isSmallerThan400} /> : <LoginNav />}
         </Flex>
       </Container>
     </header>
