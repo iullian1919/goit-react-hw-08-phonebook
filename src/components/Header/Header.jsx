@@ -9,10 +9,10 @@ import { useMediaQuery } from '@chakra-ui/react';
 import { useNavigate } from 'react-router-dom';
 
 const Header = () => {
-  const [isSmallerThan400] = useMediaQuery('(min-width: 300px)');
+  const [isSmallerThan300] = useMediaQuery('(min-width: 300px)');
   const isLoggedIn = useSelector(selectIsLoggedIn);
   const setFontsize = () => {
-    return isSmallerThan400 ? '6xl' : '3xl';
+    return isSmallerThan300 ? '6xl' : '3xl';
   };
   const navigate = useNavigate();
   const handleNavigate = () => {
@@ -48,7 +48,7 @@ const Header = () => {
           </Text>
 
           <Spacer />
-          {isLoggedIn ? <UserMenu size={isSmallerThan400} /> : <LoginNav />}
+          {isLoggedIn ? <UserMenu size={isSmallerThan300} /> : <LoginNav />}
         </Flex>
       </Container>
     </header>
