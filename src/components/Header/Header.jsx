@@ -40,8 +40,8 @@ const Header = () => {
             fontSize={setFontsize()}
             cursor="pointer"
             onClick={handleNavigate}
-            whiteSpace="nowrap" // Evită să se înșiruiască textul pe mai multe linii
-            overflow="hidden" // Ascunde textul care depășește limitele containerului
+            whiteSpace="nowrap"
+            overflow="hidden"
             textOverflow="ellipsis"
           >
             Phonebook
