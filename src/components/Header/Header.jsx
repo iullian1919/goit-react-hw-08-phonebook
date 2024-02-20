@@ -9,7 +9,7 @@ import { useMediaQuery } from '@chakra-ui/react';
 import { useNavigate } from 'react-router-dom';
 
 const Header = () => {
-  const [isSmallerThan400] = useMediaQuery('(min-width: 300px)');
+  const [isSmallerThan400] = useMediaQuery('(min-width: 400px)');
   const isLoggedIn = useSelector(selectIsLoggedIn);
   const setFontsize = () => {
     return isSmallerThan400 ? '6xl' : '3xl';

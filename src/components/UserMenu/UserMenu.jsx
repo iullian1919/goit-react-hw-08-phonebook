@@ -24,12 +24,12 @@ const UserMenu = () => {
     dispatch(logOut());
   };
 
-  const [isSmallerThan650] = useMediaQuery('(max-width: 650px)');
+  const [isSmallerThan620] = useMediaQuery('(max-width: 620px)');
 
   return (
     <Box display="flex" alignItems="center" gap={10}>
-      {!isSmallerThan650 && (
-        <Text fontWeight="400" fontSize="sm">
+      {!isSmallerThan620 && (
+        <Text fontWeight="300" fontSize="md">
           Hello, {user.email}
         </Text>
       )}
