@@ -27,7 +27,7 @@ const ContactList = () => {
     });
   };
   return (
-    <Container maxW="1000">
+    <Container maxW="520">
       <TableContainer>
         <Table>
           <Thead>
